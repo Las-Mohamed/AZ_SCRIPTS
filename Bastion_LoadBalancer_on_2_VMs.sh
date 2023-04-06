@@ -14,7 +14,7 @@ echo Image1 ?
 read image1
 echo Admin1 username ?
 read adminVM1
-echo Admin1 password ?
+echo "Admin1 password (12 caractères, maj,min et chiffre ?)"
 read pswd1
 echo Nom de la VM2 ?
 read VM2
@@ -22,14 +22,14 @@ echo Image2 ?
 read image2
 echo Admin2 username ?
 read adminVM2
-echo Admin2 password ?
+echo "Admin2 password ? (12 caractères, min, maj et chiffres)"
 read pswd2
 echo ------------Création Base de données MariaDB------------------------- 
 echo Name of your DB server ? 
 read DBname 
 echo Admin DB user name ? 
 read DBuser
-echo Mot de passe DATABASE ?
+echo "Mot de passe DATABASE ? (9 caractères, min, maj et chiffre)"
 read pswDB 
 echo -----------------------Création du groupe de ressources-----------------------
 az group create \
@@ -209,7 +209,7 @@ az mariadb server firewall-rule create \
     --server $DBname \
     --name AllowMyIP \
     --start-ip-address 0.0.0.0 \
-    --end-ip-address 0.0.0.0 
+    --end-ip-address 0.0.0.0
 
 az mariadb server update \
     --resource-group $RessGrp \
