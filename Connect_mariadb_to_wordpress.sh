@@ -8,13 +8,13 @@ read hostname
 echo database?
 read namedatabase
 # UPDATE 
-sudo apt update && sudo apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 # INSTALLATION APACHE
-sudo apt install apache2
+sudo apt install apache2 -y
 # INSTALLATION MARIADB-CLIENT
-sudo apt install mariadb-client-core-10.1
+sudo apt install mariadb-client-core-10.1 -y
 # INSTALLATION PHP 
-sudo apt install php php-mysql
+sudo apt install php php-mysql -y
 # INSTALLATION WORDPRESS
 cd /tmp 
 sudo wget https://wordpress.org/latest.tar.gz
